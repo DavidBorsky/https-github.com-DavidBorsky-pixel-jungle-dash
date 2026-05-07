@@ -4,7 +4,7 @@ Pixel Jungle Dash is a complete original side-scrolling browser platformer built
 
 ## Play Online
 
-- Game link: Play Pixel Jungle Dash Here (http://127.0.0.1:5500/pixel-jungle-dash/index.html)
+- Game link: Play Pixel Jungle Dash Here (pixel-jungle-dash/index.html)
 
 ## Features
 
