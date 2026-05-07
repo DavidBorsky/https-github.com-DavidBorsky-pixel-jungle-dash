@@ -5,7 +5,6 @@ Pixel Jungle Dash is a complete original side-scrolling browser platformer built
 ## Play Online
 
 - Game link: [Play Pixel Jungle Dash](https://davidborsky.github.io/https-github.com-DavidBorsky-pixel-jungle-dash/)
-- Repository: [GitHub Repository](https://github.com/DavidBorsky/https-github.com-DavidBorsky-pixel-jungle-dash)
 
 ## Features
 
