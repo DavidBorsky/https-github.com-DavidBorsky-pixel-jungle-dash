@@ -1,0 +1,236 @@
+:root {
+  --bg-1: #163320;
+  --bg-2: #27593b;
+  --panel: rgba(13, 23, 18, 0.92);
+  --text: #f4ffe2;
+  --muted: #bfd6ab;
+  --accent: #ffd84d;
+  --accent-2: #6fffe9;
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Trebuchet MS", "Verdana", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(170, 255, 126, 0.15), transparent 35%),
+    linear-gradient(180deg, #0d1f16 0%, #163320 45%, #102113 100%);
+}
+
+.app-shell {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-2);
+  font-size: 0.8rem;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 0.95;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ui-button {
+  border: 2px solid #173324;
+  background: linear-gradient(180deg, #ffe36f 0%, #e09c2f 100%);
+  color: #102113;
+  font-weight: 800;
+  border-radius: 999px;
+  padding: 12px 18px;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+}
+
+.ui-button:hover,
+.ui-button:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+}
+
+.ui-button.secondary {
+  background: linear-gradient(180deg, #1d5e4f 0%, #123d33 100%);
+  color: var(--text);
+  border-color: #7fffd4;
+}
+
+.game-panel {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 20px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hud-card {
+  background: var(--panel);
+  border: 2px solid rgba(159, 232, 112, 0.5);
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 12px 30px var(--shadow);
+}
+
+.hud-card h2 {
+  margin-bottom: 12px;
+  color: var(--accent);
+}
+
+.hud-list {
+  display: grid;
+  gap: 10px;
+}
+
+.hud-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  color: var(--muted);
+}
+
+.hud-list dd {
+  margin: 0;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.controls-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  display: grid;
+  gap: 10px;
+}
+
+.canvas-wrap {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 3px solid rgba(159, 232, 112, 0.55);
+  box-shadow: 0 18px 40px var(--shadow);
+  background: #0c1d13;
+}
+
+#gameCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  image-rendering: pixelated;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(8, 15, 11, 0.25), rgba(8, 15, 11, 0.8));
+}
+
+.overlay.visible {
+  display: flex;
+}
+
+.overlay-card {
+  max-width: 620px;
+  padding: 28px;
+  border-radius: 28px;
+  background: rgba(10, 19, 14, 0.92);
+  border: 2px solid rgba(111, 255, 233, 0.45);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.42);
+  text-align: center;
+}
+
+.overlay-kicker {
+  color: var(--accent-2);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 10px;
+  font-size: 0.82rem;
+}
+
+.overlay-card h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 12px;
+}
+
+#overlayMessage {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.overlay-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.overlay-hint {
+  margin-top: 16px;
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 1024px) {
+  .game-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    order: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 16px;
+  }
+
+  .game-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .overlay-card {
+    padding: 22px;
+  }
+}

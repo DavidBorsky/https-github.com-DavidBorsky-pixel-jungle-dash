@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Jungle Dash</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="game-header">
+        <div>
+          <p class="eyebrow">Original Browser Platformer</p>
+          <h1>Pixel Jungle Dash</h1>
+        </div>
+        <div class="header-actions">
+          <button id="pauseButton" class="ui-button" type="button">Pause</button>
+          <button id="restartButton" class="ui-button secondary" type="button">Restart</button>
+        </div>
+      </header>
+
+      <section class="game-panel">
+        <aside class="sidebar">
+          <div class="hud-card">
+            <h2>Status</h2>
+            <dl class="hud-list">
+              <div><dt>Level</dt><dd id="levelValue">1</dd></div>
+              <div><dt>Score</dt><dd id="scoreValue">0</dd></div>
+              <div><dt>Gems</dt><dd id="gemsValue">0</dd></div>
+              <div><dt>Lives</dt><dd id="livesValue">3</dd></div>
+              <div><dt>Health</dt><dd id="healthValue">3</dd></div>
+              <div><dt>Time</dt><dd id="timeValue">180</dd></div>
+            </dl>
+          </div>
+
+          <div class="hud-card">
+            <h2>Controls</h2>
+            <ul class="controls-list">
+              <li>Move: <strong>A / D</strong> or <strong>Arrow Keys</strong></li>
+              <li>Jump: <strong>Space</strong>, <strong>W</strong>, or <strong>Up</strong></li>
+              <li>Pause: <strong>P</strong> or button</li>
+              <li>Restart: <strong>R</strong> or button</li>
+            </ul>
+          </div>
+        </aside>
+
+        <div class="canvas-wrap">
+          <canvas id="gameCanvas" width="960" height="540" aria-label="Pixel Jungle Dash game canvas"></canvas>
+
+          <section id="overlay" class="overlay visible" aria-live="polite">
+            <div class="overlay-card">
+              <p id="overlayKicker" class="overlay-kicker">Adventure Awaits</p>
+              <h2 id="overlayTitle">Pixel Jungle Dash</h2>
+              <p id="overlayMessage">
+                Race through the canopy, collect glowing jungle gems, avoid ancient hazards,
+                and reach the portal before time runs out.
+              </p>
+              <div class="overlay-actions">
+                <button id="primaryAction" class="ui-button" type="button">Start Game</button>
+                <button id="secondaryAction" class="ui-button secondary" type="button">How To Play</button>
+              </div>
+              <p id="overlayHint" class="overlay-hint">
+                Smooth keyboard controls, three handcrafted levels, checkpoints, and original retro-style visuals.
+              </p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="./src/game.js"></script>
+  </body>
+</html>
