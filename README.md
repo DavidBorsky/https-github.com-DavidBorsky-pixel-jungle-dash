@@ -6,6 +6,7 @@ Pixel Jungle Dash is a complete original side-scrolling browser platformer built
 
 - Game link: [Play Pixel Jungle Dash](https://davidborsky.github.io/https-github.com-DavidBorsky-pixel-jungle-dash/)
 - Repository: [GitHub Repository](https://github.com/DavidBorsky/https-github.com-DavidBorsky-pixel-jungle-dash)
+- If the game link shows `404`, wait for the GitHub Pages deployment workflow to finish and make sure the repository Pages source is set to `GitHub Actions`.
 
 ## Features
 
@@ -47,9 +48,9 @@ Then open the local URL shown in the terminal.
 
 1. Push the `pixel-jungle-dash` folder contents to a GitHub repository.
 2. In GitHub, open `Settings` -> `Pages`.
-3. Under `Build and deployment`, choose `Deploy from a branch`.
-4. Select your branch, usually `main`, and the root folder.
-5. Save. GitHub Pages will publish the site automatically.
+3. Under `Build and deployment`, set `Source` to `GitHub Actions`.
+4. Push to `main` and wait for the `Deploy GitHub Pages` workflow to finish.
+5. Open the published site URL.
 
 ### Netlify
 
