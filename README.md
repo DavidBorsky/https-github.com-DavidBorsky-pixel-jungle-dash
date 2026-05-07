@@ -2,6 +2,11 @@
 
 Pixel Jungle Dash is a complete original side-scrolling browser platformer built with plain HTML, CSS, and JavaScript. It features three handcrafted jungle levels, an original explorer character, enemies, hazards, checkpoints, a portal finish, score tracking, lives, health, a timer, pause, restart, and game-over flows.
 
+## Play Online
+
+- Game link: `https://davidborsky.github.io/https-github.com-DavidBorsky-pixel-jungle-dash/`
+- Repository: `https://github.com/DavidBorsky/https-github.com-DavidBorsky-pixel-jungle-dash`
+
 ## Features
 
 - Play directly in a desktop or laptop browser with no build step
